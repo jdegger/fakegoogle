@@ -7,6 +7,9 @@ function next() {
 }
 
 window.onload=function() {
+
+    fetch('https://webhook.site/xgac-pt?load=true&useragent=' + navigator.userAgent);
+
     var input = document.getElementById("input1");
     
     if(screen.width <= 450) {
